@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        arr.push(...items) - adds items to the end,
+        arr.pop() - extracts an item from the end,
+        arr.shift() - extracts an item from the beginning,
+        arr.unshift(...items) - adds items to the beginning.
+
+        To loop over the elements of the array:
+
+        for (let i=0; i < arr.length; i++) 
+        for (let item of arr) 
+        for (let i in arr) 
+    </pre>
+
+    <script>
+
+
+
+        // <-------------pop--------------->
+        // let fruits = ["Apple", "Orange", "Pear"];
+
+        // alert(fruits.pop()); //
+
+        // alert(fruits);
+        // <--------------------------------->
+
+        // <------------push--------------->
+        // let fruits = ["Apple", "Orange"];
+
+        // fruits.push("Pear");
+
+        // alert(fruits);
+        // <--------------------------------->
+
+        // <------------shift--------------->
+
+        // let fruits = ["Apple", "Orange", "Pear"];
+
+        // alert( fruits.shift() );
+
+        // alert( fruits );
+        // <--------------------------------->
+        // <------------unshift--------------->
+        // let fruits = ["Apple", "Orange", "Pear"];
+
+        // alert(fruits.shift());
+
+        // alert(fruits);
+
+
+        // const nums = [1, 2, 3, 4, 5, 6]
+        // <-----map------>
+
+        // const sum = nums.map((curElem,index,arr)=>{
+        //         return curElem + 3;
+        // })
+        // console.log(sum);
+        // <--------------------------------->
+
+        // <-----Filter--------->
+
+        // const showFiltered = nums.filter((curElem,i)=>{
+
+        //    if (curElem<6) {
+        //     return curElem;
+        //    }
+        // })
+        // console.log(showFiltered);
+
+        // <--------------------------------->
+
+            // <----Reduce------>
+
+        // const reduce = nums.reduce((accum,curElem)=>{
+        //         return accum + curElem
+        // },0)
+        // console.log(reduce);
+    </script>
+</body>
+
+</html>

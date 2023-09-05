@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        Set: It is a collection of values that can be accessed without a specific key. The elements are unique and the
+        addition of duplicates is not allowed. Sets are mostly used to remove duplicates from any other data structure
+
+        Map: They are used to store data in key-value pairs where keys are used to uniquely identify an element and
+        values contain the data associated with it.
+
+    </pre>
+
+
+    <script>
+        // <--------------Set-------------------------->
+        let sample = new Set();
+        sample.add("Hello");
+        sample.add(1)
+        sample.add("Bye")
+        sample.add("@");
+
+        for (let item of sample) {
+            console.log(item);
+        }
+        // <------------------------------------------->
+
+
+        // <--------------Map-------------------------->
+        let sample2 = new Map();
+        sample.set("name", "Ram");
+        sample.set("Role", "SDE")
+        sample.set("Country", "India")
+        
+        for (let item of sample2) {
+            console.log(item);
+        }
+        // <------------------------------------------->
+
+
+    </script>
+</body>
+
+</html>

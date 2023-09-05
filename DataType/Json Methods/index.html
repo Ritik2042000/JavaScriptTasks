@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>
+        JSON.stringify to convert objects into JSON.
+        JSON.parse to convert JSON back into an object.
+    </h1>
+    <p>
+        JSON is data-only language-independent specification, so some JavaScript-specific object properties are skipped
+        by JSON.stringify.
+        Namely:
+        Function properties (methods).
+        Symbolic keys and values.
+        Properties that store undefined.
+    </p>
+
+    <p>JSON.stringify(value[, replacer, space])</p>
+    <p>JSON.stringify(value[, replacer, space])</p>
+
+    <script>
+        // <-------------JSON.stringify--------------------->
+
+        let student = {
+            name: 'John',
+            age: 30,
+            isAdmin: false,
+            courses: ['html', 'css', 'js'],
+            spouse: null
+        };
+
+        let json = JSON.stringify(student);
+
+        alert(typeof json); // we've got a string!
+
+        alert(json);
+
+
+        // <-----------------JSON.parse-------------------------->
+
+        let numbers = "[0, 1, 2, 3]";
+
+        numbers = JSON.parse(numbers);
+
+        alert(numbers[1]); // 1
+        // <-------------------------------------------->
+
+        let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+
+        let meetup = JSON.parse(str, function (key, value) {
+            if (key == 'date') return new Date(value);
+            return value;
+        });
+
+        alert(meetup.date.getDate());
+
+        // <------------------->
+        let user = {
+            name: "John Smith",
+            age: 35
+        };
+
+        let user2 = JSON.parse(JSON.stringify(user));
+    </script>
+</body>
+
+</html>
